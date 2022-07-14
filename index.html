@@ -13,152 +13,172 @@
 <div id="tscores" class="container">
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-          <h1 class="display-4">T-Score Calculator</h1>
+          <h3>T-Score Calculator</h3>
           <p class="lead">This web app is a simulator for how to convert raw exam scores to T-scores using population averages and standard deviations.</p>
         </div>
       </div>
-     
-    <div class="row d-flex justify-content-center">
-        <div class="col">Individual Raw Score
-        </div>
-        <div class="col"><label for="cc-name" class="form-label">Raw QA</label>
-            <input type="number" class="form-control" v-model="qa" placeholder="" required>
+      <table class="table-responsive">
+        <tr>
+            <td>
+            <div>Individual Raw Score
+            </div>
+        </td>
+        <td><div><label for="cc-name" class="form-label">Raw QA</label>
+            <input type="number" class="form-control input-sm" v-model="qa" placeholder="" required>
             <small class="text-muted"></small>
         </div>
-      
-        <div class="col"><label for="cc-number" class="form-label">Raw VA</label>
-            <input type="number" class="form-control" v-model="va" placeholder="" required>
+    </td>
+            
+          <td> <div><label for="cc-number" class="form-label">Raw VA</label>
+            <input type="number" class="form-control input-sm" v-model="va" placeholder="" required>
             <small class="text-muted"></small>
-        </div>
-      
-        <div class="col"> <label for="cc-name" class="form-label">Raw MAT</label>
-            <input type="number" class="form-control" v-model="mat" placeholder="" required>
-            <small class="text-muted"></small>
-        </div>
-      
-        <div class="col"><label for="cc-number" class="form-label">Raw ENG</label>
-            <input type="number" class="form-control" v-model="eng" placeholder="" required>
-            <small class="text-muted"></small>
-        </div>
-      
-        <div class="col"><label for="cc-number" class="form-label">Raw GS</label>
-            <input type="number" class="form-control" v-model="gs" placeholder="" required>
-            <small class="text-muted"></small>
-        </div>
-
-        <div class="col"><label for="cc-number" class="form-label">Raw AGG</label>
-            <input type="number" class="form-control" v-model="agg" placeholder="" readonly>
-            <small class="text-muted"></small>
-        </div>
-    </div>
-
-    <div class="clearfix"><br></div>
-    <div class="row d-flex justify-content-center">
-
-        <div class="col">Population Avarage Raw Score
-        </div>
-
-        <div class="col"><label for="cc-name" class="form-label">AVG QA</label>
-            <input type="number" class="form-control" v-model="avgqa" placeholder="" required>
-            <small class="text-muted"></small>
-        </div>
-      
-        <div class="col"><label for="cc-number" class="form-label">AVG VA</label>
-            <input type="number" class="form-control" v-model="avgva" placeholder="" required>
-            <small class="text-muted"></small>
-        </div>
-      
-        <div class="col"> <label for="cc-name" class="form-label">AVG MAT</label>
-            <input type="number" class="form-control" v-model="avgmat" placeholder="" required>
-            <small class="text-muted"></small>
-        </div>
-      
-        <div class="col"><label for="cc-number" class="form-label">AVG ENG</label>
-            <input type="number" class="form-control" v-model="avgeng" placeholder="" required>
-            <small class="text-muted"></small>
-        </div>
-      
-        <div class="col"><label for="cc-number" class="form-label">AVG GS</label>
-            <input type="number" class="form-control" v-model="avggs" placeholder="" required>
-            <small class="text-muted"></small>
-        </div>
-
-        <div class="col"><label for="cc-number" class="form-label">AVG AGG</label>
-            <input type="number" class="form-control" v-model="avgagg" placeholder="" readonly>
-            <small class="text-muted"></small>
-        </div>
-    </div>
-    <div class="clearfix"><br></div>
-    <div class="row d-flex justify-content-center">
-        <div class="col">Population Variance Raw Score
-        </div>
-
-        <div class="col"><label for="cc-name" class="form-label">Std QA</label>
-            <input type="number" class="form-control" v-model="stdqa" placeholder="" required>
-            <small class="text-muted"></small>
-        </div>
-      
-        <div class="col"><label for="cc-number" class="form-label">Std VA</label>
-            <input type="number" class="form-control" v-model="stdva" placeholder="" required>
-            <small class="text-muted"></small>
-        </div>
-      
-        <div class="col"> <label for="cc-name" class="form-label">Std MAT</label>
-            <input type="number" class="form-control" v-model="stdmat" placeholder="" required>
-            <small class="text-muted"></small>
-        </div>
-      
-        <div class="col"><label for="cc-number" class="form-label">Std ENG</label>
-            <input type="number" class="form-control" v-model="stdeng" placeholder="" required>
-            <small class="text-muted"></small>
-        </div>
-      
-        <div class="col"><label for="cc-number" class="form-label">Std GS</label>
-            <input type="number" class="form-control" v-model="stdgs" placeholder="" required>
-            <small class="text-muted"></small>
-        </div>
-
-        <div class="col"><label for="cc-number" class="form-label"></label>
+        </div></td>
            
+        <td> <div> <label for="cc-name" class="form-label">Raw MAT</label>
+            <input type="number" class="form-control input-sm" v-model="mat" placeholder="" required>
+            <small class="text-muted"></small>
+        </div></td>
+          
+           <td><div><label for="cc-number" class="form-label">Raw ENG</label>
+            <input type="number" class="form-control input-sm" v-model="eng" placeholder="" required>
+            <small class="text-muted"></small>
+        </div></td>
+          
+            
+           <td> <div><label for="cc-number" class="form-label">Raw GS</label>
+            <input type="number" class="form-control input-sm" v-model="gs" placeholder="" required>
+            <small class="text-muted"></small>
+        </div></td>
+          
+           <td><div><label for="cc-number" class="form-label">Raw AGG</label>
+            <input type="number" class="form-control input-sm" v-model="agg" placeholder="" readonly>
+            <small class="text-muted"></small>
+        </div></td>
+    
+            
+        </tr>
+       
+      </table>
+<br>
+    <table class="table-responsive">
+        <tr>
+         <td> <div >Population Avarage Raw Score
         </div>
-    </div>
-    <div class="clearfix"><br><hr></div>
-
-    <div class="row d-flex justify-content-center">
-        <div class="col"><label for="cc-number" class="form-label"> </label>
-           
-        </div>
+        </td>
+       <td><div><label for="cc-name" class="form-label">AVG QA</label>
+        <input type="number" class="form-control input-sm" v-model="avgqa" placeholder="" required>
         
-        <div class="col"><label for="cc-name" class="form-label">T Score QA</label>
-            <input type="number" class="form-control" v-model="tqa" readonly>
-            <small class="text-muted"></small>
-        </div>
-      
-        <div class="col"><label for="cc-number" class="form-label">T Score VA</label>
-            <input type="number" class="form-control" v-model="tva" placeholder="" readonly>
-            <small class="text-muted"></small>
-        </div>
-      
-        <div class="col"> <label for="cc-name" class="form-label">T Score MAT</label>
-            <input type="number" class="form-control" v-model="tmat" placeholder="" readonly>
-            <small class="text-muted"></small>
-        </div>
-      
-        <div class="col"><label for="cc-number" class="form-label">T Score ENG</label>
-            <input type="number" class="form-control" v-model="teng" placeholder="" readonly>
-            <small class="text-muted"></small>
-        </div>
-      
-        <div class="col"><label for="cc-number" class="form-label">T Score GS</label>
-            <input type="number" class="form-control" v-model="tgs" placeholder="" readonly>
-            <small class="text-muted"></small>
-        </div>
-
-        <div class="col"><label for="cc-number" class="form-label">T Score AGG</label>
-            <input type="number" class="form-control" v-model="tagg" placeholder="" readonly>
-            <small class="text-muted"></small>
-        </div>
     </div>
+       </td>
+        <td> <div><label for="cc-number" class="form-label">AVG VA</label>
+            <input type="number" class="form-control input-sm" v-model="avgva" placeholder="" required>
+           
+        </div>
+    </td>
+    <td><div> <label for="cc-name" class="form-label">AVG MAT</label>
+            <input type="number" class="form-control input-sm" v-model="avgmat" placeholder="" required>
+           
+        </div>
+    </td>
+    <td>
+        <div ><label for="cc-number" class="form-label">AVG ENG</label>
+            <input type="number" class="form-control input-sm" v-model="avgeng" placeholder="" required>
+           
+        </div>
+    </td>
+    <td>
+        <div ><label for="cc-number" class="form-label">AVG GS</label>
+            <input type="number" class="form-control input-sm" v-model="avggs" placeholder="" required>
+           
+        </div>
+    </td>
+    <td>
+        <div ><label for="cc-number" class="form-label">AVG AGG</label>
+            <input type="number" class="form-control input-sm" v-model="avgagg" placeholder="" readonly>
+            <small class="text-muted"></small>
+        </div>
+    </td>
+ </tr>
+    </table>
+<br>
+    <table class="table-responsive">
+        <td> <div>Population Variance Raw Score
+        </div></td>
+       
+        <td> <div><label for="cc-name" class="form-label">Std QA</label>
+            <input type="number" class="form-control input-sm" v-model="stdqa" placeholder="" required>
+            <small class="text-muted"></small>
+        </div></td>
+       
+      <td>
+        <div><label for="cc-number" class="form-label">Std VA</label>
+            <input type="number" class="form-control input-sm" v-model="stdva" placeholder="" required>
+            <small class="text-muted"></small>
+        </div>
+      </td>
+       
+      <td><div> <label for="cc-name" class="form-label">Std MAT</label>
+        <input type="number" class="form-control input-sm" v-model="stdmat" placeholder="" required>
+        <small class="text-muted"></small>
+    </div>
+</td>
+   <td>
+            <div><label for="cc-number" class="form-label">Std ENG</label>
+                <input type="number" class="form-control input-sm" v-model="stdeng" placeholder="" required>
+                <small class="text-muted"></small>
+            </div>
+        </td>
+      <td><div><label for="cc-number" class="form-label">Std GS</label>
+        <input type="number" class="form-control input-sm" v-model="stdgs" placeholder="" required>
+        <small class="text-muted"></small>
+    </div>
+</td>
+        
+       <td> <div><label for="cc-number" class="form-label input-sm"></label>
+           
+       </div></td>
+       
+        </tr>
+    </table>
+   <div><br><hr></div>
+    <table class="table-responsive">
+        <tr>
+        <td> <div><label for="cc-number" class="form-label"> </label>
+           
+        </div></td>
+       
+        <td> <div><label for="cc-name" class="form-label">T Score QA</label>
+            <input type="number" class="form-control input-sm" v-model="tqa" readonly>
+            <small class="text-muted"></small>
+        </div></td>
+       
+      <td> <div><label for="cc-number" class="form-label">T Score VA</label>
+        <input type="number" class="form-control input-sm" v-model="tva" placeholder="" readonly>
+        <small class="text-muted"></small>
+    </div></td>
+       
+      <td><div> <label for="cc-name" class="form-label">T Score MAT</label>
+        <input type="number" class="form-control input-sm" v-model="tmat" placeholder="" readonly>
+        <small class="text-muted"></small>
+    </div></td>
+        
+      <td> <div><label for="cc-number" class="form-label">T Score ENG</label>
+        <input type="number" class="form-control" v-model="teng" placeholder="" readonly>
+        <small class="text-muted"></small>
+    </div></td>
+       
+      <td> <div><label for="cc-number" class="form-label">T Score GS</label>
+        <input type="number" class="form-control input-sm" v-model="tgs" placeholder="" readonly>
+        <small class="text-muted"></small>
+    </div></td>
+       
+        <td><div ><label for="cc-number" class="form-label">T Score AGG</label>
+            <input type="number" class="form-control input-sm" v-model="tagg" placeholder="" readonly>
+            <small class="text-muted"></small>
+        </div></td>
+        
+        </tr>
+    </table>
     <br>
     <div align="center" > <div class="form-group">
         <button type="button" class="btn btn-primary" v-on:click="tscore_calculate">Calculate T-Scores</button>
