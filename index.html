@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+
+<div id="tscores" class="container">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">T-Score Calculator</h1>
+          <p class="lead">This web app is a simulator for how to convert raw exam scores to T-scores using population averages and standard deviations.</p>
+        </div>
+      </div>
+     
+    <div class="row d-flex justify-content-center">
+        <div class="col">Individual Raw Score
+        </div>
+        <div class="col"><label for="cc-name" class="form-label">Raw QA</label>
+            <input type="number" class="form-control" v-model="qa" placeholder="" required>
+            <small class="text-muted"></small>
+        </div>
+      
+        <div class="col"><label for="cc-number" class="form-label">Raw VA</label>
+            <input type="number" class="form-control" v-model="va" placeholder="" required>
+            <small class="text-muted"></small>
+        </div>
+      
+        <div class="col"> <label for="cc-name" class="form-label">Raw MAT</label>
+            <input type="number" class="form-control" v-model="mat" placeholder="" required>
+            <small class="text-muted"></small>
+        </div>
+      
+        <div class="col"><label for="cc-number" class="form-label">Raw ENG</label>
+            <input type="number" class="form-control" v-model="eng" placeholder="" required>
+            <small class="text-muted"></small>
+        </div>
+      
+        <div class="col"><label for="cc-number" class="form-label">Raw GS</label>
+            <input type="number" class="form-control" v-model="gs" placeholder="" required>
+            <small class="text-muted"></small>
+        </div>
+
+        <div class="col"><label for="cc-number" class="form-label">Raw AGG</label>
+            <input type="number" class="form-control" v-model="agg" placeholder="" readonly>
+            <small class="text-muted"></small>
+        </div>
+    </div>
+
+    <div class="clearfix"><br></div>
+    <div class="row d-flex justify-content-center">
+
+        <div class="col">Population Avarage Raw Score
+        </div>
+
+        <div class="col"><label for="cc-name" class="form-label">AVG QA</label>
+            <input type="number" class="form-control" v-model="avgqa" placeholder="" required>
+            <small class="text-muted"></small>
+        </div>
+      
+        <div class="col"><label for="cc-number" class="form-label">AVG VA</label>
+            <input type="number" class="form-control" v-model="avgva" placeholder="" required>
+            <small class="text-muted"></small>
+        </div>
+      
+        <div class="col"> <label for="cc-name" class="form-label">AVG MAT</label>
+            <input type="number" class="form-control" v-model="avgmat" placeholder="" required>
+            <small class="text-muted"></small>
+        </div>
+      
+        <div class="col"><label for="cc-number" class="form-label">AVG ENG</label>
+            <input type="number" class="form-control" v-model="avgeng" placeholder="" required>
+            <small class="text-muted"></small>
+        </div>
+      
+        <div class="col"><label for="cc-number" class="form-label">AVG GS</label>
+            <input type="number" class="form-control" v-model="avggs" placeholder="" required>
+            <small class="text-muted"></small>
+        </div>
+
+        <div class="col"><label for="cc-number" class="form-label">AVG AGG</label>
+            <input type="number" class="form-control" v-model="avgagg" placeholder="" readonly>
+            <small class="text-muted"></small>
+        </div>
+    </div>
+    <div class="clearfix"><br></div>
+    <div class="row d-flex justify-content-center">
+        <div class="col">Population Variance Raw Score
+        </div>
+
+        <div class="col"><label for="cc-name" class="form-label">Std QA</label>
+            <input type="number" class="form-control" v-model="stdqa" placeholder="" required>
+            <small class="text-muted"></small>
+        </div>
+      
+        <div class="col"><label for="cc-number" class="form-label">Std VA</label>
+            <input type="number" class="form-control" v-model="stdva" placeholder="" required>
+            <small class="text-muted"></small>
+        </div>
+      
+        <div class="col"> <label for="cc-name" class="form-label">Std MAT</label>
+            <input type="number" class="form-control" v-model="stdmat" placeholder="" required>
+            <small class="text-muted"></small>
+        </div>
+      
+        <div class="col"><label for="cc-number" class="form-label">Std ENG</label>
+            <input type="number" class="form-control" v-model="stdeng" placeholder="" required>
+            <small class="text-muted"></small>
+        </div>
+      
+        <div class="col"><label for="cc-number" class="form-label">Std GS</label>
+            <input type="number" class="form-control" v-model="stdgs" placeholder="" required>
+            <small class="text-muted"></small>
+        </div>
+
+        <div class="col"><label for="cc-number" class="form-label"></label>
+           
+        </div>
+    </div>
+    <div class="clearfix"><br><hr></div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col"><label for="cc-number" class="form-label"> </label>
+           
+        </div>
+        
+        <div class="col"><label for="cc-name" class="form-label">T Score QA</label>
+            <input type="number" class="form-control" v-model="tqa" readonly>
+            <small class="text-muted"></small>
+        </div>
+      
+        <div class="col"><label for="cc-number" class="form-label">T Score VA</label>
+            <input type="number" class="form-control" v-model="tva" placeholder="" readonly>
+            <small class="text-muted"></small>
+        </div>
+      
+        <div class="col"> <label for="cc-name" class="form-label">T Score MAT</label>
+            <input type="number" class="form-control" v-model="tmat" placeholder="" readonly>
+            <small class="text-muted"></small>
+        </div>
+      
+        <div class="col"><label for="cc-number" class="form-label">T Score ENG</label>
+            <input type="number" class="form-control" v-model="teng" placeholder="" readonly>
+            <small class="text-muted"></small>
+        </div>
+      
+        <div class="col"><label for="cc-number" class="form-label">T Score GS</label>
+            <input type="number" class="form-control" v-model="tgs" placeholder="" readonly>
+            <small class="text-muted"></small>
+        </div>
+
+        <div class="col"><label for="cc-number" class="form-label">T Score AGG</label>
+            <input type="number" class="form-control" v-model="tagg" placeholder="" readonly>
+            <small class="text-muted"></small>
+        </div>
+    </div>
+    <br>
+    <div align="center" > <div class="form-group">
+        <button type="button" class="btn btn-primary" v-on:click="tscore_calculate">Calculate T-Scores</button>
+    </div></div>
+  
+	<!-- Footer -->
+<footer class="page-footer font-small blue">
+    <div class="footer-copyright text-center py-3"><h3></h3>Feel free to change the raw individual scores,population averages and standerd deviations</h3>
+      </div
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2022 Copyright:
+      <a href="https://mbsse.gov.sl/"> Ministry of Basic and Senior Secondary Education (MBSSE) </a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+    
+   
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="jquery-3.2.1.slim.min.js"></script>
+<script src="popper.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
